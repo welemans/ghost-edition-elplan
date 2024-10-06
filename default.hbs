@@ -7,6 +7,7 @@
     <title>{{meta_title}}</title>
 
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="stylesheet" href="{{asset "css/misc/modal.css"}}">
 
     {{ghost_head}}
 </head>
@@ -89,7 +90,8 @@
             </div>
         </div>
     </footer>
-
+    {{!-- Modal for non-members --}}
+    {{> "modal"}} 
 </div>
 
 {{#is "post, page"}}
@@ -101,6 +103,15 @@
     if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
         document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
     }
+
+    // Show modal for non-members and apply blur effect
+    document.addEventListener('DOMContentLoaded', function () {
+        var modalOverlay = document.querySelector('.modal-overlay');
+        if (modalOverlay) {
+            modalOverlay.style.display = 'flex'; // Display modal
+            document.querySelector('.site').classList.add('blurred-content'); // Apply blur effect to background
+        }
+    });
 </script>
 
 <script src="{{asset "built/main.min.js"}}"></script>
