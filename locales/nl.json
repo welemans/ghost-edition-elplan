@@ -3,7 +3,7 @@
     "Newer Posts": "Nieuwere Posts",
     "Older Posts": "Oudere Posts",
     "Page {page} of {pages}": "Pagina {page} van {pages}",
-    "Subscribe": "Volg ons",
+    "Subscribe": "Registreer",
     "Subscribe to {blogtitle}": "Volg {blogtitle}",
     "Subscribed!": "Aangemeld!",
     "with the email address": "met het emailadres",
@@ -28,5 +28,11 @@
     "% posts": "% posts",
     "1 min read": "1 min read",
     "% min read": "% min read",
-    "Sign in": "Log in"
+    "Sign in": "Log in",
+    "Published by": "Geschreven door",
+    "Member discussion": "Reacties",
+    "This post is for subscribers only": "Deze post is alleen voor members",
+    "Subscribe now": "Registreer nu",
+    "Already have an account? Sign in": "Heb je al een account? Log in",
+    "You might also like...": "Misschien ook leuk..."
 }

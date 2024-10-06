@@ -1,0 +1,28 @@
+{{!< default}}
+
+<main class="site-main">
+
+    <header class="feed-header gh-canvas">
+            <div class="feed-header-wrapper">
+                <h2 class="feed-header-title">Archief</h2>
+            </div>
+            {{!-- <div class='archive__excerpt'>
+                {{#get 'posts'}}
+                {{t
+                    'Browse door alle {total} posts.'
+                    total=pagination.total
+                }}
+                {{/get}}
+            </div> --}}
+    </header>
+
+    <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+        {{pagination}}
+    </div>
+    </div>
+
+</main>
