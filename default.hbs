@@ -65,8 +65,10 @@
 
     {{#is "home"}}
         {{> "cover"}}
-        {{#if @custom.show_featured_posts}}
-            {{> "featured-posts"}}
+        {{#if @member}}
+            {{#if @custom.show_featured_posts}}
+                {{> "featured-posts"}}
+            {{/if}}
         {{/if}}
     {{/is}}
 
