@@ -76,7 +76,15 @@
         {{#if @member}}
             {{{body}}}
         {{else}}
-            <script src="{{asset "js/portal-popup.js"}}"></script>
+            {{#is "page"}}
+                {{#if access}}
+                    <script src="{{asset "js/portal-popup.js"}}"></script>
+                {{else}}
+                    {{{body}}}
+                {{/if}}
+            {{else}}
+                <script src="{{asset "js/portal-popup.js"}}"></script>
+            {{/is}}
         {{/if}}
     </div>
 
